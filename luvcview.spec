@@ -29,8 +29,7 @@ cp -f %{SOURCE1} %{SOURCE2} %{SOURCE3} .
 
 %build
 %{__make} \
-	CC="%{__cc}" CPP=%{__cxx} \
-	OPTFLAGS="%{rpmcflags}"
+	CC="%{__cc}" CPP=%{__cxx}
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -5,7 +5,7 @@
  #           -Wunused
  
 -CFLAGS += -DUSE_SDL -O2 -DLINUX -DVERSION=\"$(VERSION)\" -I$(SDLFLAGS) $(WARNINGS)
-+CFLAGS += -DUSE_SDL -DLINUX -DVERSION=\"$(VERSION)\" -I$(SDLFLAGS) $(WARNINGS) $(OPTFLAGS)
++CFLAGS += -DUSE_SDL -DLINUX -DVERSION=\"$(VERSION)\" -I$(SDLFLAGS) $(WARNINGS)
  CPPFLAGS = $(CFLAGS)
  
  OBJECTS= luvcview.o color.o utils.o v4l2uvc.o gui.o avilib.o
