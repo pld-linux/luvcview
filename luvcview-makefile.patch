@@ -1,0 +1,18 @@
+--- luvcview-0.2.6/Makefile.orig	2009-08-27 09:01:32.000000000 +0200
++++ luvcview-0.2.6/Makefile	2009-12-22 18:48:56.000000000 +0100
+@@ -23,7 +23,7 @@
+ #           -Wno-unused
+ #           -Wunused
+ 
+-CFLAGS += -DUSE_SDL -O2 -DLINUX -DVERSION=\"$(VERSION)\" -I$(SDLFLAGS) $(WARNINGS)
++CFLAGS += -DUSE_SDL -DLINUX -DVERSION=\"$(VERSION)\" -I$(SDLFLAGS) $(WARNINGS) $(OPTFLAGS)
+ CPPFLAGS = $(CFLAGS)
+ 
+ OBJECTS= luvcview.o color.o utils.o v4l2uvc.o gui.o avilib.o
+@@ -45,5 +45,5 @@
+ 
+ 
+ install: luvcview
+-	$(INSTALL) -s -m 755 -g root -o root $(APP_BINARY) $(BIN) 
++	$(INSTALL) -m 755 $(APP_BINARY) $(BIN) 
+ 	rm -f $(BIN)/uvcview
