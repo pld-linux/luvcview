@@ -24,7 +24,7 @@ mjpeg decoder and is able to save the video stream as an AVI file.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 cp -f %{SOURCE1} %{SOURCE2} %{SOURCE3} .
 
 %build
